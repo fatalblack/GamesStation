@@ -1,3 +1,5 @@
+using GamesStation.SuperExampleGame.Application;
+using GamesStation.SuperExampleGame.Application.Interfaces;
 using GamesStation.SuperExampleGame.Infrastructure;
 using GamesStation.SuperExampleGame.Infrastructure.Interfaces;
 using GamesStation.SuperExampleGame.Service;
@@ -44,6 +46,11 @@ namespace GamesStation.SuperExampleGame.Api
             services.AddScoped<ICharacterService, CharacterService>();
             services.AddScoped<IItemService, ItemService>();
             services.AddScoped<ICharacterInventoryService, CharacterInventoryService>();
+
+            //applications
+            services.AddScoped<ICharacterApplication, CharacterApplication>();
+            services.AddScoped<IItemApplication, ItemApplication>();
+            services.AddScoped<IStoreApplication, StoreApplication>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
