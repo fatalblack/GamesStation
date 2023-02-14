@@ -17,8 +17,7 @@ namespace GamesStation.SuperExampleGame.Application
 
         public async Task<List<CharacterResponseDto>> GetAll()
         {
-            //TODO: funcionalidad
-            return new List<CharacterResponseDto>();
+            return await this._characterService.GetAll();
         }
     }
 }

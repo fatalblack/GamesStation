@@ -17,8 +17,16 @@ namespace GamesStation.SuperExampleGame.Application
 
         public async Task<GenericResult<int?>> Buy(CharacterInventoryAddRequestDto request)
         {
-            //TODO: funcionalidad
-            return GenericResult<int?>.SetOk(1);
+            //TODO: validar que el character exista
+            //TODO: validar que el item exista
+            //TODO: validar si tiene recursos para comprar
+            //TODO: validar los grados
+
+            var result = await this._characterInventoryService.Add(request);
+
+            //TODO: restar recursos por la compra
+
+            return result;
         }
     }
 }
