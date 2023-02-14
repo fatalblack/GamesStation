@@ -19,8 +19,8 @@ namespace GamesStation.SuperExampleGame.Api.Controllers
         [HttpPost("buy")]
         public async Task<IActionResult> Buy([FromBody] CharacterInventoryAddRequestDto request)
         {
-            //TODO: funcionalidad
-            return Ok(true);
+            var result = await this._storeApplication.Buy(request);
+            return Ok(result);
         }
     }
 }

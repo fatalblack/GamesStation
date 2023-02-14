@@ -18,8 +18,8 @@ namespace GamesStation.SuperExampleGame.Api.Controllers
         [HttpGet("")]
         public async Task<IActionResult> GetAll()
         {
-            //TODO: funcionalidad
-            return Ok(true);
+            var result = await this._itemApplication.GetAll();
+            return Ok(result);
         }
     }
 }
