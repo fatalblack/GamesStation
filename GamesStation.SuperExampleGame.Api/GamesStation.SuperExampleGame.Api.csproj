@@ -23,6 +23,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\GamesStation.SuperExampleGame.Infrastructure\GamesStation.SuperExampleGame.Infrastructure.csproj" />
+    <ProjectReference Include="..\GamesStation.SuperExampleGame.Service\GamesStation.SuperExampleGame.Service.csproj" />
   </ItemGroup>
 
 </Project>

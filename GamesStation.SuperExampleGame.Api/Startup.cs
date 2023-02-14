@@ -1,5 +1,7 @@
 using GamesStation.SuperExampleGame.Infrastructure;
 using GamesStation.SuperExampleGame.Infrastructure.Interfaces;
+using GamesStation.SuperExampleGame.Service;
+using GamesStation.SuperExampleGame.Service.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -37,6 +39,11 @@ namespace GamesStation.SuperExampleGame.Api
             services.AddTransient(typeof(IRepository<>), typeof(Repository<>));
             services.AddTransient<IItemRepository, ItemRepository>();
             services.AddTransient<ICharacterInventoryRepository, CharacterInventoryRepository>();
+
+            //services
+            services.AddScoped<ICharacterService, CharacterService>();
+            services.AddScoped<IItemService, ItemService>();
+            services.AddScoped<ICharacterInventoryService, CharacterInventoryService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
