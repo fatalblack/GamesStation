@@ -4,4 +4,8 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\GamesStation.SuperExampleGame.Domain\GamesStation.SuperExampleGame.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
