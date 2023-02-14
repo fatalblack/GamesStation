@@ -17,8 +17,15 @@ namespace GamesStation.SuperExampleGame.Service
 
         public async Task<GenericResult<int?>> Add(CharacterInventoryAddRequestDto request)
         {
-            //TODO: realizar funcionalidad
-            return GenericResult<int?>.SetOk(1);
+            var entity = request.AsEntity();
+            var result = await this._repository.Insert(entity);
+
+            if (result > 0)
+            {
+                return GenericResult<int?>.SetOk(result);
+            }
+
+            return GenericResult<int?>.SetFail("Ocurrió un error al insertar el registro en CharacterInventory");
         }
     }
 }

@@ -3,6 +3,7 @@ using GamesStation.SuperExampleGame.Dto.CharacterDtos;
 using GamesStation.SuperExampleGame.Infrastructure.Interfaces;
 using GamesStation.SuperExampleGame.Service.Interfaces;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace GamesStation.SuperExampleGame.Service
@@ -18,8 +19,8 @@ namespace GamesStation.SuperExampleGame.Service
 
         public async Task<List<CharacterResponseDto>> GetAll()
         {
-            //TODO: realizar funcionalidad
-            return new List<CharacterResponseDto>();
+            var result = await this._repository.GetAll();
+            return result.Select(r => new CharacterResponseDto(r)).ToList();
         }
     }
 }
