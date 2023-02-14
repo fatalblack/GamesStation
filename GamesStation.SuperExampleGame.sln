@@ -3,7 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32413.511
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamesStation.SuperExampleGame.Api", "GamesStation.SuperExampleGame.Api\GamesStation.SuperExampleGame.Api.csproj", "{C02B8B43-E5D7-4C88-BCCC-E994287CFABC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GamesStation.SuperExampleGame.Api", "GamesStation.SuperExampleGame.Api\GamesStation.SuperExampleGame.Api.csproj", "{C02B8B43-E5D7-4C88-BCCC-E994287CFABC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamesStation.SuperExampleGame.Api.Tests", "GamesStation.SuperExampleGame.Api.Tests\GamesStation.SuperExampleGame.Api.Tests.csproj", "{BF4A341B-4A91-4DEA-BC5D-33E113415775}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamesStation.SuperExampleGame.Application", "GamesStation.SuperExampleGame.Application\GamesStation.SuperExampleGame.Application.csproj", "{0E4F1F9A-FA47-450D-928D-EB902A031B3B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamesStation.SuperExampleGame.Application.Tests", "GamesStation.SuperExampleGame.Application.Tests\GamesStation.SuperExampleGame.Application.Tests.csproj", "{09860EB2-701F-4E13-B9D1-A9C07CFB37E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamesStation.SuperExampleGame.Domain", "GamesStation.SuperExampleGame.Domain\GamesStation.SuperExampleGame.Domain.csproj", "{D8E36B6C-584F-4D48-A3D4-21A33F5B8D22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamesStation.SuperExampleGame.Dto", "GamesStation.SuperExampleGame.Dto\GamesStation.SuperExampleGame.Dto.csproj", "{085FDE36-1916-49AC-8996-E5F0394B18E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamesStation.SuperExampleGame.Infrastructure", "GamesStation.SuperExampleGame.Infrastructure\GamesStation.SuperExampleGame.Infrastructure.csproj", "{91A4B56B-1EF6-4DCD-92B0-17CD5576A88D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamesStation.SuperExampleGame.Service", "GamesStation.SuperExampleGame.Service\GamesStation.SuperExampleGame.Service.csproj", "{B71910AB-5D9E-4B8E-954F-FA6E571B8D69}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamesStation.SuperExampleGame.Service.Tests", "GamesStation.SuperExampleGame.Service.Tests\GamesStation.SuperExampleGame.Service.Tests.csproj", "{86A3C061-9ED4-4C56-BD3D-E7A657BBC221}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +31,38 @@ Global
 		{C02B8B43-E5D7-4C88-BCCC-E994287CFABC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C02B8B43-E5D7-4C88-BCCC-E994287CFABC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C02B8B43-E5D7-4C88-BCCC-E994287CFABC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF4A341B-4A91-4DEA-BC5D-33E113415775}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF4A341B-4A91-4DEA-BC5D-33E113415775}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF4A341B-4A91-4DEA-BC5D-33E113415775}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF4A341B-4A91-4DEA-BC5D-33E113415775}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E4F1F9A-FA47-450D-928D-EB902A031B3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E4F1F9A-FA47-450D-928D-EB902A031B3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E4F1F9A-FA47-450D-928D-EB902A031B3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E4F1F9A-FA47-450D-928D-EB902A031B3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09860EB2-701F-4E13-B9D1-A9C07CFB37E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09860EB2-701F-4E13-B9D1-A9C07CFB37E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09860EB2-701F-4E13-B9D1-A9C07CFB37E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09860EB2-701F-4E13-B9D1-A9C07CFB37E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8E36B6C-584F-4D48-A3D4-21A33F5B8D22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8E36B6C-584F-4D48-A3D4-21A33F5B8D22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8E36B6C-584F-4D48-A3D4-21A33F5B8D22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8E36B6C-584F-4D48-A3D4-21A33F5B8D22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{085FDE36-1916-49AC-8996-E5F0394B18E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{085FDE36-1916-49AC-8996-E5F0394B18E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{085FDE36-1916-49AC-8996-E5F0394B18E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{085FDE36-1916-49AC-8996-E5F0394B18E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91A4B56B-1EF6-4DCD-92B0-17CD5576A88D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91A4B56B-1EF6-4DCD-92B0-17CD5576A88D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91A4B56B-1EF6-4DCD-92B0-17CD5576A88D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91A4B56B-1EF6-4DCD-92B0-17CD5576A88D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B71910AB-5D9E-4B8E-954F-FA6E571B8D69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B71910AB-5D9E-4B8E-954F-FA6E571B8D69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B71910AB-5D9E-4B8E-954F-FA6E571B8D69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B71910AB-5D9E-4B8E-954F-FA6E571B8D69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86A3C061-9ED4-4C56-BD3D-E7A657BBC221}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86A3C061-9ED4-4C56-BD3D-E7A657BBC221}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86A3C061-9ED4-4C56-BD3D-E7A657BBC221}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86A3C061-9ED4-4C56-BD3D-E7A657BBC221}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
