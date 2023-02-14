@@ -1,15 +1,12 @@
+using GamesStation.SuperExampleGame.Infrastructure;
+using GamesStation.SuperExampleGame.Infrastructure.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace GamesStation.SuperExampleGame.Api
 {
@@ -31,6 +28,15 @@ namespace GamesStation.SuperExampleGame.Api
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "GamesStation.SuperExampleGame.Api", Version = "v1" });
             });
+
+            //db connection
+            this.Configuration.GetValue<string>("DefaultConnection");
+            services.AddDbContext<ApplicationContext>(options => options.UseSqlServer(this.Configuration.GetConnectionString("DefaultConnection")));
+
+            //repositories
+            services.AddTransient(typeof(IRepository<>), typeof(Repository<>));
+            services.AddTransient<IItemRepository, ItemRepository>();
+            services.AddTransient<ICharacterInventoryRepository, CharacterInventoryRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
